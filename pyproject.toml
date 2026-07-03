@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-briefing-agent"
+version = "0.1.0"
+description = "A lightweight command-line assistant for drafting structured research briefings."
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+  { name = "Research Briefing Agent Maintainers" }
+]
+dependencies = []
+
+[project.scripts]
+research-briefing-agent = "research_briefing_agent.cli:main"
+
+[tool.setuptools]
+packages = ["research_briefing_agent"]
