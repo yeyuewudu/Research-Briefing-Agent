@@ -4,14 +4,34 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "research-briefing-agent"
-version = "0.1.0"
-description = "A lightweight command-line assistant for drafting structured research briefings."
+version = "0.4.0"
+description = "A source-backed assistant for generating structured research briefings."
 readme = "README.md"
 requires-python = ">=3.7"
 authors = [
   { name = "Research Briefing Agent Maintainers" }
 ]
 dependencies = []
+
+[project.optional-dependencies]
+rich = [
+  "openpyxl",
+  "pypdf",
+  "python-docx",
+  "python-pptx",
+  "reportlab",
+]
+llm = [
+  "openai",
+]
+all = [
+  "openpyxl",
+  "pypdf",
+  "python-docx",
+  "python-pptx",
+  "reportlab",
+  "openai",
+]
 
 [project.scripts]
 research-briefing-agent = "research_briefing_agent.cli:main"
